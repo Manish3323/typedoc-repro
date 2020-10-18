@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-interface AppProps {}
+interface ComponentProps {
+  a?: string
+  b?: number
+}
 
-function App({}: AppProps) {
+/**
+ * React component which takes some optional props
+ * @constructor
+ */
+function Component({}: ComponentProps) {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -16,7 +22,6 @@ function App({}: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -38,4 +43,4 @@ function App({}: AppProps) {
   );
 }
 
-export default App;
+export default Component;
